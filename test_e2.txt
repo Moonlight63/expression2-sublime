@@ -1,0 +1,79 @@
+@name Syntax Testing
+@inputs Derp
+@outputs Herp
+@persist Foo
+@trigger Bar
+@model models/foo/bar/shit.mdl 
+
+if(first()){
+    #Boring functions
+    function void boringFunction() {
+        print("yawn")
+    }
+
+    function number numberFunction() {
+        return 1337 
+    }
+    
+    function vector vectorFunction() {
+        return vec(1337,9001,69)   
+    }
+    #-- Continue on with table, array, entity, angle, XRD, XTD, whatever your heart desires
+    
+    #Slightly more exiting functions
+    function void yayFunction(Message:string) {
+        print("I am so happy: " + Message)
+    }
+
+    function normal extremeMaths(N1, N2) {
+        return N1 + N2
+    }
+
+    function vector too1337(Vector:vector) {
+        return Vector * 1337
+    }
+
+    #The most advanced of slushes
+    function entity entity:giefFaggot() {
+        return This:owner()
+    }
+
+    function normal table:isGay() {
+        local IsGay = 0
+        foreach(K, V:normal = This) {
+            if(K == "gay" && V) {
+                IsGay = 1
+            }
+        }
+        
+        return IsGay
+    }
+
+    function void printGay(Table:table) {
+        print("This table is " + (Table:isGay() ? "very" : "not") + " gay.")
+    }
+
+    function void table:dieBitch() {
+        This["gay", normal] = 0
+    }
+    
+    #Functions in action
+    
+    boringFunction()
+    print(numberFunction())
+    print(vectorFunction())
+    yayFunction("vagina is good")
+    print(extremeMaths(1, 1))
+    print(too1337(vec(9001)))
+    print(entity():giefFaggot():name())
+    
+    local GayTable = table()
+    GayTable["gay", normal] = 1
+    local StraightTable = table()
+    StraightTable["gay", normal] = 0
+    
+    printGay(GayTable)
+    printGay(StraightTable)
+    GayTable:dieBitch()
+    printGay(GayTable)
+}
