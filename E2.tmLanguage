@@ -4,38 +4,12 @@
 <dict>
 	<key>fileTypes</key>
 	<array>
-		<string></string>
+		<string>txt</string>
 	</array>
 	<key>name</key>
 	<string>Expression 2</string>
 	<key>patterns</key>
 	<array>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.source.expression2</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>variable.parameter.source.expression2</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>support.function.source.expression2</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>Functions</string>
-			<key>match</key>
-			<string>(function) ([a-z]+) ([a-z][a-zA-Z0-9]+)</string>
-			<key>name</key>
-			<string>keyword.source.expression2</string>
-		</dict>
 		<dict>
 			<key>comment</key>
 			<string>Directives</string>
@@ -91,6 +65,30 @@
 			<string>[A-Z][a-zA-Z]*</string>
 			<key>name</key>
 			<string>variable.source.expression2</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Functions Arguments</string>
+			<key>match</key>
+			<string>(?&lt;=function) [^() ]+</string>
+			<key>name</key>
+			<string>variable.parameter.source.expression2</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Operators</string>
+			<key>match</key>
+			<string>\+|-|\*|/|:|\{|\}</string>
+			<key>name</key>
+			<string>keyword.source.expression2</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Core Functions</string>
+			<key>match</key>
+			<string></string>
+			<key>name</key>
+			<string>entity.name.function.source.expression2</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
