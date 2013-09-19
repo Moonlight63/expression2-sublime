@@ -22,7 +22,7 @@
 			<key>comment</key>
 			<string>Directives Parameters</string>
 			<key>match</key>
-			<string>(?&lt;=@name|@inputs|@outputs|@persist|@trigger|@model).*</string>
+			<string>(?&lt;=@name|@inputs|@outputs|@persist|@trigger|@model).+</string>
 			<key>name</key>
 			<string>variable.parameter.source.expression2</string>
 		</dict>
@@ -30,7 +30,15 @@
 			<key>comment</key>
 			<string>Comment</string>
 			<key>match</key>
-			<string>#(.*)</string>
+			<string>#.+</string>
+			<key>name</key>
+			<string>comment.source.expression2</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Block Comment</string>
+			<key>match</key>
+			<string>#\[(.|\n|\r)*\]#</string>
 			<key>name</key>
 			<string>comment.source.expression2</string>
 		</dict>
@@ -62,7 +70,7 @@
 			<key>comment</key>
 			<string>Variables</string>
 			<key>match</key>
-			<string>[A-Z][a-zA-Z]*</string>
+			<string>\b[A-Z]([a-zA-Z0-9]+)?</string>
 			<key>name</key>
 			<string>variable.source.expression2</string>
 		</dict>
@@ -86,7 +94,7 @@
 			<key>comment</key>
 			<string>Core Functions</string>
 			<key>match</key>
-			<string></string>
+			<string>\b[a-z]+[A-Za-z0-9]+</string>
 			<key>name</key>
 			<string>entity.name.function.source.expression2</string>
 		</dict>

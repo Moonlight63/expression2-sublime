@@ -5,6 +5,8 @@
 @trigger Bar
 @model models/foo/bar/shit.mdl 
 
+D = "Hawt" # Some single letter variable highlighting action
+
 if(first()){
     #Boring functions
     function void boringFunction() {

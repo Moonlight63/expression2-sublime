@@ -1,47 +1,65 @@
-{ "name": "Expression 2",
-  "scopeName": "source.expression2",
-  "fileTypes": ["txt"],
-  "patterns": [
-  		  { "match": "@name|@inputs|@outputs|@persist|@trigger|@model",
-  		    "name": "keyword.source.expression2",
-  		    "comment": "Directives"
-		    },
-        { "match": "(?<=@name|@inputs|@outputs|@persist|@trigger|@model).*",
-          "name": "variable.parameter.source.expression2",
-          "comment": "Directives Parameters"
+{
+    "fileTypes": [
+        "txt"
+    ],
+    "name": "Expression 2",
+    "patterns": [
+        {
+            "comment": "Directives",
+            "match": "@name|@inputs|@outputs|@persist|@trigger|@model",
+            "name": "keyword.source.expression2"
         },
-        { "match": "#(.*)",
-          "name": "comment.source.expression2",
-          "comment": "Comment"
+        {
+            "comment": "Directives Parameters",
+            "match": "(?<=@name|@inputs|@outputs|@persist|@trigger|@model).+",
+            "name": "variable.parameter.source.expression2"
         },
-        { "match": "if|elseif|else|return|while|switch|break|continue|function",
-          "name": "keyword.source.expression2",
-          "comment": "Keywords"
+        {
+            "comment": "Comment",
+            "match": "#.+",
+            "name": "comment.source.expression2"
         },
-        { "match": "\"(.*)\"",
-          "name": "string.source.expression2",
-          "comment": "Strings"
+        {
+            "comment": "Block Comment",
+            "match": "#\\[(.|\\n|\\r)*\\]#",
+            "name": "comment.source.expression2"
         },
-        { "match": "\\b[0-9]+\\b",
-          "name": "constant.numeric.source.expression2",
-          "comment": "Numbers"
+        {
+            "comment": "Keywords",
+            "match": "if|elseif|else|return|while|switch|break|continue|function",
+            "name": "keyword.source.expression2"
         },
-        { "match": "[A-Z][a-zA-Z]*",
-          "name": "variable.source.expression2",
-          "comment": "Variables"
+        {
+            "comment": "Strings",
+            "match": "\"(.*)\"",
+            "name": "string.source.expression2"
         },
-        { "match": "(?<=function) [^() ]+",
-          "name": "variable.parameter.source.expression2",
-          "comment": "Functions Arguments"
+        {
+            "comment": "Numbers",
+            "match": "\\b[0-9]+\\b",
+            "name": "constant.numeric.source.expression2"
         },
-        { "match": "\\+|-|\\*|/|:|\\{|\\}",
-          "name": "keyword.source.expression2",
-          "comment": "Operators"
+        {
+            "comment": "Variables",
+            "match": "\\b[A-Z]([a-zA-Z0-9]+)?",
+            "name": "variable.source.expression2"
         },
-        { "match": "",
-          "name": "entity.name.function.source.expression2",
-          "comment": "Core Functions"
+        {
+            "comment": "Functions Arguments",
+            "match": "(?<=function) [^() ]+",
+            "name": "variable.parameter.source.expression2"
+        },
+        {
+            "comment": "Operators",
+            "match": "\\+|-|\\*|/|:|\\{|\\}",
+            "name": "keyword.source.expression2"
+        },
+        {
+            "comment": "Core Functions",
+            "match": "\\b[a-z]+[A-Za-z0-9]+",
+            "name": "entity.name.function.source.expression2"
         }
-  ],
-  "uuid": "1c9de391-9dbf-4fbc-9273-7e159b2f9830"
+    ],
+    "scopeName": "source.expression2",
+    "uuid": "1c9de391-9dbf-4fbc-9273-7e159b2f9830"
 }
