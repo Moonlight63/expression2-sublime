@@ -30,7 +30,7 @@
 			<key>comment</key>
 			<string>Comment</string>
 			<key>match</key>
-			<string>#.+</string>
+			<string>(?&lt;!])#(?!\[).+</string>
 			<key>name</key>
 			<string>comment.source.expression2</string>
 		</dict>
