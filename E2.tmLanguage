@@ -27,20 +27,23 @@
 			<string>variable.parameter.source.expression2</string>
 		</dict>
 		<dict>
-			<key>comment</key>
-			<string>Comment</string>
-			<key>match</key>
-			<string>(?&lt;!])#(?!\[).+</string>
-			<key>name</key>
-			<string>comment.source.expression2</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>Block Comment</string>
-			<key>match</key>
-			<string>#\[(.|\n|\r)*\]#</string>
-			<key>name</key>
-			<string>comment.source.expression2</string>
+		<key>patterns</key>
+		<array>
+			<dict>
+				<key>begin</key>
+				<string>#\[</string>
+				<key>end</key>
+				<string>]#</string>
+				<key>name</key>
+				<string>comment.source.expression2</string>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>(#).*$\n?</string>
+				<key>name</key>
+				<string>comment.source.expression2</string>
+			</dict>
+		</array>
 		</dict>
 		<dict>
 			<key>comment</key>
